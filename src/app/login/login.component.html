@@ -1,0 +1,42 @@
+
+
+
+<body>
+<div class="login-wrapper" align="center">
+    <div class="card" >
+      
+      <div class="card-body">
+        <form class="form-signin" (ngSubmit)="onSubmit(signInform)" #signInform="ngForm">
+            <h1 class="h3 mb-3 fw-normal">Canary Login</h1>
+        
+            <div class="form-floating">
+              <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" ngModel required autofocus >
+              <label for="floatingInput">Email address</label>
+            </div>
+
+            <div class="form-floating">
+              <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" autocomplete="on" ngModel required >
+              <label for="floatingPassword">Password</label>
+            </div>
+        
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">&copy; Dev Environment</p>
+
+            <div class="alert alert-danger" role="alert" *ngIf="isformvalid">
+              please fill all the fields.
+            </div>
+
+            <div class="alert alert-danger" role="alert" *ngIf="iscredentialsinvalid">
+              Invalid Email Id or Password.
+            </div>
+          </form>
+      </div>
+    </div>
+
+</div>
+</body>
